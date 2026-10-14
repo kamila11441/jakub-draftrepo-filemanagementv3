@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111210">
+<meta name="description" content="Selected photography by Jakub Kowalski. People, places and visual stories.">
+<title>Jakub Kowalski — Photography</title>
+<style>
+:root{color-scheme:dark;--bg:#111210;--panel:#191a17;--ink:#f0eee7;--muted:#a09f96;--line:#373832;--accent:#b7bd9d;--serif:"Iowan Old Style",Baskerville,"Palatino Linotype",Georgia,serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;font-size:15px}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:var(--accent);color:var(--bg)}
+.wrap{width:min(1500px,calc(100% - 96px));margin:auto}
+.topbar{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:.16em;text-transform:uppercase}.brand{font-weight:650;letter-spacing:.19em}.topnav{display:flex;gap:34px;color:#c1c0b8}.topnav a,.index{transition:color .2s}.topnav a:hover,.index:hover{color:var(--accent)}.index{color:var(--muted)}
+.hero{padding:clamp(76px,10vw,150px) 0 66px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:7vw;align-items:end}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.22em;color:var(--accent)}h1{font-family:var(--serif);font-weight:400;font-size:clamp(76px,11.4vw,172px);line-height:.79;letter-spacing:-.075em;margin:32px 0 0}h1 span{color:#8e927b;font-style:italic}.hero-right{max-width:320px;justify-self:end;padding-bottom:9px}.hero-right p{font-family:var(--serif);font-size:clamp(22px,2.3vw,30px);line-height:1.24;margin:0 0 30px;color:#d4d2c9}.small-link{font-size:10px;text-transform:uppercase;letter-spacing:.17em;border-bottom:1px solid var(--accent);padding-bottom:9px;display:inline-block;color:var(--ink);transition:color .2s,border-color .2s}.small-link:hover{color:var(--accent)}
+.hero-image{position:relative;height:min(59vw,690px);min-height:360px;background:#242620;overflow:hidden;margin:0 0 clamp(100px,13vw,180px)}.hero-image img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.78) brightness(.82)}.hero-image .placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 72% 35%,#414438 0%,#282a23 35%,#1a1b17 76%);color:#a4a795;font-family:var(--serif);font-size:clamp(22px,3vw,40px);font-style:italic;letter-spacing:-.025em}.hero-image .placeholder:after{content:"";position:absolute;inset:22px;border:1px solid #ffffff18;pointer-events:none}.image-caption{position:absolute;bottom:22px;left:24px;color:#f3f0e7;font-size:9px;letter-spacing:.19em;text-transform:uppercase;text-shadow:0 1px 8px #000}
+.section-head{display:flex;justify-content:space-between;align-items:end;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:28px}.section-head h2{font-family:var(--serif);font-size:clamp(48px,6vw,82px);font-weight:400;letter-spacing:-.065em;margin:0}.section-head p{font-size:9px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:0 0 8px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 34px}.filter{border:1px solid #41423b;padding:10px 15px;border-radius:100px;background:transparent;color:#c7c6bd;font-size:9px;text-transform:uppercase;letter-spacing:.15em;cursor:pointer;transition:background .2s,color .2s,border-color .2s}.filter.active,.filter:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));column-gap:18px;align-items:start;width:100%}.gallery-column{display:flex;flex-direction:column;gap:38px;min-width:0}.tile{min-width:0;margin:0;break-inside:avoid}.tile-visual{position:relative;width:100%;overflow:visible;background:transparent}.tile-visual a{display:block;width:100%;line-height:0;overflow:hidden;background:#1b1c18}.tile img{display:block;width:100%;height:auto;max-width:100%;object-fit:initial;background:transparent;filter:saturate(.82);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .6s}.tile a:hover img{transform:scale(1.025);filter:saturate(1)}.tile-info{display:flex;justify-content:space-between;gap:12px;padding-top:13px;font-size:11px;color:#e5e2d8}.tile-info span:first-child{overflow-wrap:anywhere}.tile-info span:last-child{color:var(--muted);text-transform:uppercase;font-size:9px;letter-spacing:.12em;flex-shrink:0}.empty{padding:70px 0;color:var(--muted);font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-style:italic;grid-column:1/-1}
+/* About and contact share the same quiet editorial rhythm as the hero and gallery. */
+.statement{position:relative;display:grid;grid-template-columns:minmax(230px,.78fr) minmax(0,1.22fr);gap:clamp(35px,7vw,120px);align-items:start;padding:clamp(76px,10vw,138px) 0 clamp(82px,11vw,150px);border-top:1px solid var(--line);margin-top:clamp(100px,13vw,170px)}
+.statement:before,.contact:before{content:"";position:absolute;top:-1px;left:0;width:76px;height:1px;background:var(--accent)}
+.statement-heading{display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.section-index{font-size:9px;text-transform:uppercase;letter-spacing:.2em;color:var(--accent)}
+.statement h2,.contact h2{font-family:var(--serif);font-size:clamp(46px,6vw,86px);line-height:.96;letter-spacing:-.065em;margin:0;font-weight:400}
+.statement p{max-width:760px;font-family:var(--serif);font-size:clamp(21px,2.35vw,32px);line-height:1.42;margin:0;color:#d0cec4;letter-spacing:-.025em}
+.contact{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:48px;align-items:end;padding:clamp(70px,9vw,118px) 0 clamp(76px,9vw,120px);border-top:1px solid var(--line)}
+.contact .eyebrow{margin-bottom:26px}.contact h2{max-width:720px}.contact-right{justify-self:end;width:min(100%,360px);font-size:14px;line-height:1.65;color:#d3d1c8;border-left:1px solid var(--line);padding:4px 0 4px 28px}.contact-right .small-link{margin-bottom:2px}.contact-right p{margin:24px 0 0}.contact-right p a{border-bottom:1px solid var(--line);padding-bottom:4px;transition:color .2s,border-color .2s}.contact-right p a:hover{border-color:var(--accent);color:var(--accent)}
+.footer{display:grid;grid-template-columns:1fr 1fr auto;align-items:center;gap:20px;padding:24px 0 30px;border-top:1px solid var(--line);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}.footer span:nth-child(2){text-align:center}.footer a{color:var(--ink);white-space:nowrap;justify-self:end;transition:color .2s}.footer a:hover{color:var(--accent)}
+
+/* Theme control and coordinated light palette */
+.header-actions{display:flex;align-items:center;gap:24px}
+.theme-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 0;border:0;background:transparent;color:var(--muted);font-size:9px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.theme-toggle:hover{color:var(--accent)}
+.theme-icon{font-size:16px;line-height:1}
+body[data-theme="light"]{color-scheme:light;--bg:#f0efe9;--panel:#e8e6de;--ink:#20211d;--muted:#74756d;--line:#d0cec4;--accent:#69765c}
+body[data-theme="light"] .topnav{color:#55574f}
+body[data-theme="light"] h1 span{color:#737d64}
+body[data-theme="light"] .hero-right p{color:#4c4d46}
+body[data-theme="light"] .hero-image{background:#d7d6ce}
+body[data-theme="light"] .hero-image .placeholder{background:radial-gradient(ellipse at 72% 35%,#d4d5c8 0%,#c3c5b8 38%,#aaa99e 100%);color:#56594d}
+body[data-theme="light"] .image-caption{color:#fff}
+body[data-theme="light"] .filter{border-color:var(--line);color:#55574f}
+body[data-theme="light"] .filter.active,body[data-theme="light"] .filter:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+body[data-theme="light"] .tile-info{color:#30312b}
+body[data-theme="light"] .statement p{color:#4c4d46}
+body[data-theme="light"] .contact-right{color:#55574f}
+body[data-theme="light"] .tile-visual a{background:#e4e2d9}
+@media(max-width:760px){.header-actions{gap:14px}.theme-toggle{font-size:8px}.theme-label{display:none}}
+
+@media(min-width:1500px){.wrap{width:min(1500px,calc(100% - 120px))}}
+@media(max-width:760px){.wrap{width:calc(100% - 38px)}.topbar{height:70px}.topnav{gap:14px}.topnav a{font-size:9px}.index{display:none}.hero{grid-template-columns:1fr;gap:32px;padding:72px 0 48px}.hero-right{justify-self:start;max-width:410px}h1{font-size:clamp(70px,16vw,120px)}.hero-image{height:72vw;min-height:260px;margin-bottom:95px}.section-head{align-items:end;gap:18px}.section-head h2{font-size:48px}.section-head p{font-size:8px;text-align:right}.gallery{column-gap:12px}.gallery-column{gap:28px}.tile-info{font-size:10px}.statement{grid-template-columns:1fr;gap:28px;margin-top:100px;padding:76px 0}.statement-heading{gap:20px}.statement h2,.contact h2{font-size:clamp(48px,12vw,72px)}.statement p{font-size:23px}.contact{grid-template-columns:1fr;gap:34px;padding:75px 0}.contact-right{justify-self:start;border-left:0;border-top:1px solid var(--line);padding:24px 0 0;width:100%}.footer{grid-template-columns:1fr;align-items:start;gap:12px}.footer span:nth-child(2){text-align:left}.footer a{justify-self:start}}
+@media(max-width:420px){.topnav{gap:10px}.topnav a{font-size:8px}.brand{font-size:9px}.filters{gap:6px}.filter{padding:9px 11px}.gallery{grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr))}}
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+<header class="topbar">
+<a class="brand" href="#">JK / PHOTOGRAPHY</a>
+<nav class="topnav"><a href="#work">Selected work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<div class="header-actions"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch theme"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Light mode</span></button><a class="index" href="admin/pictures.html">Manage ↗</a></div>
+</header>
+<section class="hero">
+<div><div class="eyebrow">Photographer · Warsaw / Poland </div><h1>Images<br>with a<br><span>point of view.</span></h1></div>
+<div class="hero-right"><p>Quiet observations, considered frames, and stories told through light.</p><a class="small-link" href="#work">Explore selected work ↓</a></div>
+</section>
+<div class="hero-image"><div class="placeholder">A study in light &amp; feeling</div><img id="heroImg" alt="" hidden><div class="image-caption">Selected frame / 001</div></div>
+<section id="work">
+<div class="section-head"><h2>Selected work</h2><p id="count">Portfolio / 00 images</p></div>
+<div class="filters" id="filters"><button class="filter active" data-category="all">All work</button><button class="filter" data-category="people">People</button><button class="filter" data-category="places">Places</button><button class="filter" data-category="editorial">Editorial</button><button class="filter" data-category="other">Other</button></div>
+<div class="gallery" id="gallery"><div class="empty">Your photographs will appear here when added in the Picture Manager.</div></div>
+</section>
+<section class="statement" id="about"><div class="statement-heading"><span class="section-index">01 / A little about me</span><h2>Looking closer.<br>Leaving room<br>for feeling.</h2></div><p>I’m Jakub, a photographer interested in people, places and the details that give a moment its character. This portfolio is a growing collection of observations — made with intention, shaped by light, and kept honest.</p></section>
+<section class="contact" id="contact">
+<div><div class="eyebrow">02 / Have a project in mind?</div><h2>Let’s make<br>something lasting.</h2></div>
+<div class="contact-right"><a class="small-link" href="mailto:igjakyb11@gmail.com">Get in touch ↗</a><p><a href="https://www.instagram.com/jakyb11/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></p><p>Jakub Kowalski<br>Photography / 2026</p></div>
+</section>
+<footer class="footer"><span>© Jakub Kowalski</span><span>Independent photographer</span><a href="#top">Back to top ↑</a></footer>
+</div>
+<script>
+
+// Respect the visitor's saved preference, otherwise follow the device theme.
+const themeToggle=document.getElementById('themeToggle');
+function applyTheme(theme){
+  document.body.dataset.theme=theme;
+  const light=theme==='light';
+  themeToggle.setAttribute('aria-label',light?'Switch to dark mode':'Switch to light mode');
+  themeToggle.title=light?'Switch to dark mode':'Switch to light mode';
+  themeToggle.querySelector('.theme-icon').textContent=light?'◐':'☼';
+  themeToggle.querySelector('.theme-label').textContent=light?'Dark mode':'Light mode';
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',light?'#f0efe9':'#111210');
+}
+const savedTheme=(()=>{try{return localStorage.getItem('jk-portfolio-theme')}catch(e){return null}})();
+applyTheme(savedTheme||(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'));
+themeToggle.addEventListener('click',()=>{
+  const next=document.body.dataset.theme==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('jk-portfolio-theme',next)}catch(e){}
+});
+
+const galleryEl=document.getElementById('gallery');
+const countEl=document.getElementById('count');
+let photos=[];
+let active='all';
+
+function pathFor(src){
+  if(!src)return '';
+  if(/^https?:\/\//i.test(src))return src;
+  return src.replace(/^\/+/, '');
+}
+
+function draw(){
+  const items=photos.filter(p=>active==='all'||p.category===active);
+  countEl.textContent=`Portfolio / ${String(items.length).padStart(2,'0')} images`;
+  galleryEl.innerHTML='';
+  if(!items.length){
+    galleryEl.innerHTML='<div class="empty">No photographs in this selection yet.</div>';
+    return;
+  }
+
+  // Calculate flexible column count, then distribute images row-wise across columns.
+  // Each column stacks naturally like a Pinterest masonry layout, without cropping images.
+  const minColumnWidth=240;
+  const gap=16;
+  const columnCount=Math.max(1,Math.floor((galleryEl.clientWidth+gap)/(minColumnWidth+gap)));
+  galleryEl.style.gridTemplateColumns=`repeat(${columnCount},minmax(0,1fr))`;
+  const columns=Array.from({length:columnCount},()=>{
+    const column=document.createElement('div');
+    column.className='gallery-column';
+    galleryEl.appendChild(column);
+    return column;
+  });
+
+  items.forEach((p,i)=>{
+    const tile=document.createElement('article');
+    tile.className='tile';
+    const visual=document.createElement('div');
+    visual.className='tile-visual';
+    const a=document.createElement('a');
+    a.href=pathFor(p.image);
+    a.target='_blank';
+    a.rel='noopener noreferrer';
+    a.setAttribute('aria-label',p.alt||'Open photograph');
+    const img=document.createElement('img');
+    img.src=pathFor(p.image);
+    img.alt=p.alt||'';
+    img.loading='lazy';
+    img.decoding='async';
+    img.onerror=()=>{tile.style.display='none';};
+    a.appendChild(img);
+    visual.appendChild(a);
+    tile.appendChild(visual);
+    // Captions are optional per photograph. Older gallery entries default to visible.
+    if(p.showCaption!==false){
+      const info=document.createElement('div');
+      info.className='tile-info';
+      const title=document.createElement('span');
+      title.textContent=p.alt||(p.image||'').split('/').pop();
+      const category=document.createElement('span');
+      category.textContent=p.category||'Other';
+      info.append(title,category);
+      tile.appendChild(info);
+    }
+    columns[i%columnCount].appendChild(tile);
+  });
+}
+
+let resizeFrame;
+window.addEventListener('resize',()=>{
+  cancelAnimationFrame(resizeFrame);
+  resizeFrame=requestAnimationFrame(draw);
+});
+
+document.getElementById('filters').addEventListener('click',e=>{
+  const button=e.target.closest('button[data-category]');
+  if(!button)return;
+  active=button.dataset.category;
+  document.querySelectorAll('.filter').forEach(item=>item.classList.toggle('active',item===button));
+  draw();
+});
+
+// Fetch the latest committed gallery order instead of a browser/CDN-cached JSON file.
+fetch(`content/gallery.json?v=${Date.now()}`, {cache:'no-store'})
+  .then(response=>{
+    if(!response.ok)throw new Error('Could not load gallery');
+    return response.json();
+  })
+  .then(data=>{
+    photos=Array.isArray(data)?data:(data.photos||[]);
+    draw();
+    if(photos[0]?.image){
+      const hero=document.getElementById('heroImg');
+      hero.src=pathFor(photos[0].image);
+      hero.hidden=false;
+      hero.style.display='block';
+      hero.parentElement.querySelector('.placeholder').style.display='none';
+    }
+  })
+  .catch(error=>{
+    console.error('Gallery could not be loaded:',error);
+    photos=[];
+    countEl.textContent='Portfolio / unavailable';
+    galleryEl.innerHTML='<div class="empty">The gallery could not be loaded. Check that <code>content/gallery.json</code> exists in the published site and contains your photo list, then refresh this page.</div>';
+  });
+</script>
+</body>
+</html>
