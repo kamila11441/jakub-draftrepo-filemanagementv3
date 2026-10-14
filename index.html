@@ -1,205 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#111210">
-<meta name="description" content="Selected photography by Jakub Kowalski. People, places and visual stories.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909"><meta name="description" content="Selected photography by Jakub Kowalski.">
 <title>Jakub Kowalski — Photography</title>
 <style>
-:root{color-scheme:dark;--bg:#111210;--panel:#191a17;--ink:#f0eee7;--muted:#a09f96;--line:#373832;--accent:#b7bd9d;--serif:"Iowan Old Style",Baskerville,"Palatino Linotype",Georgia,serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;font-size:15px}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:var(--accent);color:var(--bg)}
-.wrap{width:min(1500px,calc(100% - 96px));margin:auto}
-.topbar{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:.16em;text-transform:uppercase}.brand{font-weight:650;letter-spacing:.19em}.topnav{display:flex;gap:34px;color:#c1c0b8}.topnav a,.index{transition:color .2s}.topnav a:hover,.index:hover{color:var(--accent)}.index{color:var(--muted)}
-.hero{padding:clamp(76px,10vw,150px) 0 66px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:7vw;align-items:end}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.22em;color:var(--accent)}h1{font-family:var(--serif);font-weight:400;font-size:clamp(76px,11.4vw,172px);line-height:.79;letter-spacing:-.075em;margin:32px 0 0}h1 span{color:#8e927b;font-style:italic}.hero-right{max-width:320px;justify-self:end;padding-bottom:9px}.hero-right p{font-family:var(--serif);font-size:clamp(22px,2.3vw,30px);line-height:1.24;margin:0 0 30px;color:#d4d2c9}.small-link{font-size:10px;text-transform:uppercase;letter-spacing:.17em;border-bottom:1px solid var(--accent);padding-bottom:9px;display:inline-block;color:var(--ink);transition:color .2s,border-color .2s}.small-link:hover{color:var(--accent)}
-.hero-image{position:relative;height:min(59vw,690px);min-height:360px;background:#242620;overflow:hidden;margin:0 0 clamp(100px,13vw,180px)}.hero-image img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.78) brightness(.82)}.hero-image .placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 72% 35%,#414438 0%,#282a23 35%,#1a1b17 76%);color:#a4a795;font-family:var(--serif);font-size:clamp(22px,3vw,40px);font-style:italic;letter-spacing:-.025em}.hero-image .placeholder:after{content:"";position:absolute;inset:22px;border:1px solid #ffffff18;pointer-events:none}.image-caption{position:absolute;bottom:22px;left:24px;color:#f3f0e7;font-size:9px;letter-spacing:.19em;text-transform:uppercase;text-shadow:0 1px 8px #000}
-.section-head{display:flex;justify-content:space-between;align-items:end;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:28px}.section-head h2{font-family:var(--serif);font-size:clamp(48px,6vw,82px);font-weight:400;letter-spacing:-.065em;margin:0}.section-head p{font-size:9px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:0 0 8px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 34px}.filter{border:1px solid #41423b;padding:10px 15px;border-radius:100px;background:transparent;color:#c7c6bd;font-size:9px;text-transform:uppercase;letter-spacing:.15em;cursor:pointer;transition:background .2s,color .2s,border-color .2s}.filter.active,.filter:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));column-gap:18px;align-items:start;width:100%}.gallery-column{display:flex;flex-direction:column;gap:38px;min-width:0}.tile{min-width:0;margin:0;break-inside:avoid}.tile-visual{position:relative;width:100%;overflow:visible;background:transparent}.tile-visual a{display:block;width:100%;line-height:0;overflow:hidden;background:#1b1c18}.tile img{display:block;width:100%;height:auto;max-width:100%;object-fit:initial;background:transparent;filter:saturate(.82);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .6s}.tile a:hover img{transform:scale(1.025);filter:saturate(1)}.tile-info{display:flex;justify-content:space-between;gap:12px;padding-top:13px;font-size:11px;color:#e5e2d8}.tile-info span:first-child{overflow-wrap:anywhere}.tile-info span:last-child{color:var(--muted);text-transform:uppercase;font-size:9px;letter-spacing:.12em;flex-shrink:0}.empty{padding:70px 0;color:var(--muted);font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-style:italic;grid-column:1/-1}
-/* About and contact share the same quiet editorial rhythm as the hero and gallery. */
-.statement{position:relative;display:grid;grid-template-columns:minmax(230px,.78fr) minmax(0,1.22fr);gap:clamp(35px,7vw,120px);align-items:start;padding:clamp(76px,10vw,138px) 0 clamp(82px,11vw,150px);border-top:1px solid var(--line);margin-top:clamp(100px,13vw,170px)}
-.statement:before,.contact:before{content:"";position:absolute;top:-1px;left:0;width:76px;height:1px;background:var(--accent)}
-.statement-heading{display:flex;flex-direction:column;align-items:flex-start;gap:24px}
-.section-index{font-size:9px;text-transform:uppercase;letter-spacing:.2em;color:var(--accent)}
-.statement h2,.contact h2{font-family:var(--serif);font-size:clamp(46px,6vw,86px);line-height:.96;letter-spacing:-.065em;margin:0;font-weight:400}
-.statement p{max-width:760px;font-family:var(--serif);font-size:clamp(21px,2.35vw,32px);line-height:1.42;margin:0;color:#d0cec4;letter-spacing:-.025em}
-.contact{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:48px;align-items:end;padding:clamp(70px,9vw,118px) 0 clamp(76px,9vw,120px);border-top:1px solid var(--line)}
-.contact .eyebrow{margin-bottom:26px}.contact h2{max-width:720px}.contact-right{justify-self:end;width:min(100%,360px);font-size:14px;line-height:1.65;color:#d3d1c8;border-left:1px solid var(--line);padding:4px 0 4px 28px}.contact-right .small-link{margin-bottom:2px}.contact-right p{margin:24px 0 0}.contact-right p a{border-bottom:1px solid var(--line);padding-bottom:4px;transition:color .2s,border-color .2s}.contact-right p a:hover{border-color:var(--accent);color:var(--accent)}
-.footer{display:grid;grid-template-columns:1fr 1fr auto;align-items:center;gap:20px;padding:24px 0 30px;border-top:1px solid var(--line);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}.footer span:nth-child(2){text-align:center}.footer a{color:var(--ink);white-space:nowrap;justify-self:end;transition:color .2s}.footer a:hover{color:var(--accent)}
-
-/* Theme control and coordinated light palette */
-.header-actions{display:flex;align-items:center;gap:24px}
-.theme-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 0;border:0;background:transparent;color:var(--muted);font-size:9px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
-.theme-toggle:hover{color:var(--accent)}
-.theme-icon{font-size:16px;line-height:1}
-body[data-theme="light"]{color-scheme:light;--bg:#f0efe9;--panel:#e8e6de;--ink:#20211d;--muted:#74756d;--line:#d0cec4;--accent:#69765c}
-body[data-theme="light"] .topnav{color:#55574f}
-body[data-theme="light"] h1 span{color:#737d64}
-body[data-theme="light"] .hero-right p{color:#4c4d46}
-body[data-theme="light"] .hero-image{background:#d7d6ce}
-body[data-theme="light"] .hero-image .placeholder{background:radial-gradient(ellipse at 72% 35%,#d4d5c8 0%,#c3c5b8 38%,#aaa99e 100%);color:#56594d}
-body[data-theme="light"] .image-caption{color:#fff}
-body[data-theme="light"] .filter{border-color:var(--line);color:#55574f}
-body[data-theme="light"] .filter.active,body[data-theme="light"] .filter:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-body[data-theme="light"] .tile-info{color:#30312b}
-body[data-theme="light"] .statement p{color:#4c4d46}
-body[data-theme="light"] .contact-right{color:#55574f}
-body[data-theme="light"] .tile-visual a{background:#e4e2d9}
-@media(max-width:760px){.header-actions{gap:14px}.theme-toggle{font-size:8px}.theme-label{display:none}}
-
-@media(min-width:1500px){.wrap{width:min(1500px,calc(100% - 120px))}}
-@media(max-width:760px){.wrap{width:calc(100% - 38px)}.topbar{height:70px}.topnav{gap:14px}.topnav a{font-size:9px}.index{display:none}.hero{grid-template-columns:1fr;gap:32px;padding:72px 0 48px}.hero-right{justify-self:start;max-width:410px}h1{font-size:clamp(70px,16vw,120px)}.hero-image{height:72vw;min-height:260px;margin-bottom:95px}.section-head{align-items:end;gap:18px}.section-head h2{font-size:48px}.section-head p{font-size:8px;text-align:right}.gallery{column-gap:12px}.gallery-column{gap:28px}.tile-info{font-size:10px}.statement{grid-template-columns:1fr;gap:28px;margin-top:100px;padding:76px 0}.statement-heading{gap:20px}.statement h2,.contact h2{font-size:clamp(48px,12vw,72px)}.statement p{font-size:23px}.contact{grid-template-columns:1fr;gap:34px;padding:75px 0}.contact-right{justify-self:start;border-left:0;border-top:1px solid var(--line);padding:24px 0 0;width:100%}.footer{grid-template-columns:1fr;align-items:start;gap:12px}.footer span:nth-child(2){text-align:left}.footer a{justify-self:start}}
-@media(max-width:420px){.topnav{gap:10px}.topnav a{font-size:8px}.brand{font-size:9px}.filters{gap:6px}.filter{padding:9px 11px}.gallery{grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr))}}
-</style>
-</head>
-<body>
-<div class="wrap" id="top">
-<header class="topbar">
-<a class="brand" href="#">JK / PHOTOGRAPHY</a>
-<nav class="topnav"><a href="#work">Selected work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-<div class="header-actions"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch theme"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Light mode</span></button><a class="index" href="admin/pictures.html">Manage ↗</a></div>
-</header>
-<section class="hero">
-<div><div class="eyebrow">Photographer · Warsaw / Poland </div><h1>Images<br>with a<br><span>point of view.</span></h1></div>
-<div class="hero-right"><p>Quiet observations, considered frames, and stories told through light.</p><a class="small-link" href="#work">Explore selected work ↓</a></div>
-</section>
-<div class="hero-image"><div class="placeholder">A study in light &amp; feeling</div><img id="heroImg" alt="" hidden><div class="image-caption">Selected frame / 001</div></div>
-<section id="work">
-<div class="section-head"><h2>Selected work</h2><p id="count">Portfolio / 00 images</p></div>
-<div class="filters" id="filters"><button class="filter active" data-category="all">All work</button><button class="filter" data-category="people">People</button><button class="filter" data-category="places">Places</button><button class="filter" data-category="editorial">Editorial</button><button class="filter" data-category="other">Other</button></div>
-<div class="gallery" id="gallery"><div class="empty">Your photographs will appear here when added in the Picture Manager.</div></div>
-</section>
-<section class="statement" id="about"><div class="statement-heading"><span class="section-index">01 / A little about me</span><h2>Looking closer.<br>Leaving room<br>for feeling.</h2></div><p>I’m Jakub, a photographer interested in people, places and the details that give a moment its character. This portfolio is a growing collection of observations — made with intention, shaped by light, and kept honest.</p></section>
-<section class="contact" id="contact">
-<div><div class="eyebrow">02 / Have a project in mind?</div><h2>Let’s make<br>something lasting.</h2></div>
-<div class="contact-right"><a class="small-link" href="mailto:igjakyb11@gmail.com">Get in touch ↗</a><p><a href="https://www.instagram.com/jakyb11/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></p><p>Jakub Kowalski<br>Photography / 2026</p></div>
-</section>
-<footer class="footer"><span>© Jakub Kowalski</span><span>Independent photographer</span><a href="#top">Back to top ↑</a></footer>
-</div>
+:root{color-scheme:dark;--bg:#090909;--panel:#111;--ink:#f4f1eb;--muted:#aaa69f;--line:#353330;--serif:"Bodoni 72",Didot,"Iowan Old Style",Baskerville,Georgia,serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:#eee;color:#090909}.wrap{width:min(1600px,calc(100% - 72px));margin:auto}.topbar{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}.brand{font:400 14px var(--serif);letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}.topnav{display:flex;gap:30px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#c9c5be}.topnav a,.manage{transition:opacity .2s}.topnav a:hover,.manage:hover{opacity:.6}.rightnav{display:flex;gap:22px;align-items:center}.manage{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}.hero{min-height:clamp(480px,57vw,760px);position:relative;display:grid;grid-template-columns:1fr;align-items:end;overflow:hidden;border-bottom:1px solid var(--line);background:#151515}.hero-img,.hero-placeholder{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:grayscale(1) brightness(.72);display:block}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.45) 38%,rgba(0,0,0,.08) 72%),linear-gradient(0deg,rgba(0,0,0,.58),transparent 50%);pointer-events:none}.hero-placeholder{display:flex;align-items:center;justify-content:center;color:#777;font:italic 30px var(--serif);background:radial-gradient(ellipse at 65% 35%,#444 0,#222 40%,#0b0b0b 80%)}.hero-content{position:relative;z-index:1;padding:clamp(38px,6vw,88px) clamp(28px,4.5vw,72px);max-width:800px}.eyebrow{font-size:9px;text-transform:uppercase;letter-spacing:.32em;color:#d0cbc3}.hero h1{font:400 clamp(64px,10vw,148px)/.79 var(--serif);letter-spacing:-.065em;text-transform:uppercase;margin:26px 0 25px}.hero h1 span{display:block}.hero-bottom{display:flex;align-items:end;justify-content:space-between;gap:25px;max-width:740px}.hero-bottom p{font:italic clamp(17px,2vw,23px)/1.3 var(--serif);color:#ded9d1;max-width:300px;margin:0}.hero-categories{display:grid;gap:8px;text-align:right;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#ddd8d0}.work{padding:0 0 clamp(90px,12vw,160px)}.work-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);margin-bottom:25px}.work-head h2{font:400 32px var(--serif);margin:0;letter-spacing:-.04em}.count{font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}.filters{display:flex;justify-content:center;gap:clamp(14px,3vw,40px);flex-wrap:wrap;margin:30px 0 38px}.filter{border:0;border-bottom:1px solid transparent;padding:7px 0 9px;background:none;color:#a8a39b;font-size:9px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}.filter.active,.filter:hover{color:#fff;border-bottom-color:#fff}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(14px,1.6vw,25px);align-items:start}.gallery-column{display:flex;flex-direction:column;gap:clamp(24px,3vw,44px);min-width:0}.tile{margin:0;min-width:0}.tile-visual{overflow:hidden;background:#161616}.tile-visual a{display:block;line-height:0}.tile img{display:block;width:100%;height:auto;max-width:100%;filter:grayscale(1);transition:filter .55s,transform .8s cubic-bezier(.2,.7,.2,1)}.tile a:hover img{filter:grayscale(.25);transform:scale(1.025)}.tile-info{display:flex;justify-content:space-between;gap:12px;padding-top:11px;color:#ded9d1;font-size:10px;letter-spacing:.03em}.tile-info span:first-child{overflow-wrap:anywhere}.tile-info span:last-child{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#918c85;flex-shrink:0}.empty{padding:65px 0;color:var(--muted);font:italic 26px var(--serif);grid-column:1/-1}.lower{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.about,.contact{padding:clamp(38px,5vw,74px);position:relative;min-height:320px}.about{border-right:1px solid var(--line);background:linear-gradient(115deg,#141414,#0a0a0a)}.section-no{font-size:9px;letter-spacing:.23em;color:#aaa39a}.lower h2{font:400 clamp(48px,6vw,82px)/.9 var(--serif);letter-spacing:-.06em;text-transform:uppercase;margin:22px 0}.about p,.contact p{max-width:480px;color:#bdb8b0;font-size:13px;line-height:1.75}.contact{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between}.contact h2{margin-bottom:30px}.contact-links{display:flex;gap:28px;flex-wrap:wrap;margin-top:24px}.contact-links a{font-size:9px;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid #777;padding-bottom:7px}.footer{display:flex;justify-content:space-between;gap:20px;padding:22px 0 28px;color:#88827a;font-size:8px;letter-spacing:.18em;text-transform:uppercase}.footer a{color:#ddd8d0}.footer a:hover{opacity:.65}
+@media(max-width:760px){.wrap{width:calc(100% - 32px)}.topbar{height:68px}.brand{font-size:11px}.topnav{gap:13px}.topnav a{font-size:8px}.manage{display:none}.hero{min-height:600px;min-height:75svh}.hero-img,.hero-placeholder{object-position:58% center}.hero:after{background:linear-gradient(0deg,rgba(0,0,0,.88),rgba(0,0,0,.08) 100%),linear-gradient(90deg,rgba(0,0,0,.42),transparent)}.hero-content{padding:32px 22px}.hero h1{font-size:clamp(62px,14vw,104px);margin:22px 0}.hero-bottom{align-items:start;flex-direction:column}.hero-categories{display:flex;gap:14px;flex-wrap:wrap;text-align:left}.work-head h2{font-size:27px}.filters{justify-content:flex-start;gap:18px;margin:25px 0}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gallery-column{gap:26px}.tile-info{font-size:9px}.tile-info span:last-child{font-size:7px}.lower{grid-template-columns:1fr}.about{border-right:0;border-bottom:1px solid var(--line)}.about,.contact{padding:38px 24px;min-height:0}.lower h2{font-size:60px}.footer{flex-direction:column;gap:10px}}@media(max-width:380px){.topnav{gap:9px}.topnav a{font-size:7px}.brand{letter-spacing:.12em}.gallery{gap:9px}}
+</style></head>
+<body><div class="wrap" id="top">
+<header class="topbar"><a class="brand" href="#top">Jakub Kowalski</a><nav class="topnav" aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav><div class="rightnav"><a class="manage" href="admin/pictures.html">Manage ↗</a></div></header>
+<section class="hero" aria-label="Introduction"><div class="hero-placeholder" id="heroPlaceholder">Selected frame</div><img class="hero-img" id="heroImg" alt="" hidden><div class="hero-content"><div class="eyebrow">Photography · Warsaw / Poland</div><h1><span>People</span><span>Places</span><span>Stories</span></h1><div class="hero-bottom"><p>Portraits, places and fleeting moments, seen in a different light.</p><div class="hero-categories"><span>People</span><span>Places</span><span>Fashion</span><span>Other</span></div></div></div></section>
+<section class="work" id="work"><div class="work-head"><h2>Selected work</h2><span class="count" id="count">Portfolio / 00 images</span></div><div class="filters" id="filters"><button class="filter active" data-category="all">All</button><button class="filter" data-category="people">People</button><button class="filter" data-category="places">Places</button><button class="filter" data-category="fashion">Fashion</button><button class="filter" data-category="other">Other</button></div><div class="gallery" id="gallery"><div class="empty">Your photographs will appear here.</div></div></section>
+<section class="lower"><div class="about" id="about"><div class="section-no">01 / About</div><h2>Looking<br>closer.</h2><p>I’m Jakub, a photographer drawn to people, places and the quiet moments in between. My work explores the way light, atmosphere and human connection shape a story.</p></div><div class="contact" id="contact"><div><div class="section-no">02 / Contact</div><h2>Let’s talk.</h2><p>For commissions, collaborations or any inquiries, feel free to get in touch. I’m always open to new projects and ideas.</p></div><div class="contact-links"><a href="mailto:igjakyb11@gmail.com">Email ↗</a><a href="https://www.instagram.com/jakyb11/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div></section>
+<footer class="footer"><span>© Jakub Kowalski</span><span>Independent photographer</span><a href="#top">Back to top ↑</a></footer></div>
 <script>
-
-// Respect the visitor's saved preference, otherwise follow the device theme.
-const themeToggle=document.getElementById('themeToggle');
-function applyTheme(theme){
-  document.body.dataset.theme=theme;
-  const light=theme==='light';
-  themeToggle.setAttribute('aria-label',light?'Switch to dark mode':'Switch to light mode');
-  themeToggle.title=light?'Switch to dark mode':'Switch to light mode';
-  themeToggle.querySelector('.theme-icon').textContent=light?'◐':'☼';
-  themeToggle.querySelector('.theme-label').textContent=light?'Dark mode':'Light mode';
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',light?'#f0efe9':'#111210');
-}
-const savedTheme=(()=>{try{return localStorage.getItem('jk-portfolio-theme')}catch(e){return null}})();
-applyTheme(savedTheme||(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'));
-themeToggle.addEventListener('click',()=>{
-  const next=document.body.dataset.theme==='dark'?'light':'dark';
-  applyTheme(next);
-  try{localStorage.setItem('jk-portfolio-theme',next)}catch(e){}
-});
-
-const galleryEl=document.getElementById('gallery');
-const countEl=document.getElementById('count');
-let photos=[];
-let active='all';
-
-function pathFor(src){
-  if(!src)return '';
-  if(/^https?:\/\//i.test(src))return src;
-  return src.replace(/^\/+/, '');
-}
-
-function draw(){
-  const items=photos.filter(p=>active==='all'||p.category===active);
-  countEl.textContent=`Portfolio / ${String(items.length).padStart(2,'0')} images`;
-  galleryEl.innerHTML='';
-  if(!items.length){
-    galleryEl.innerHTML='<div class="empty">No photographs in this selection yet.</div>';
-    return;
-  }
-
-  // Calculate flexible column count, then distribute images row-wise across columns.
-  // Each column stacks naturally like a Pinterest masonry layout, without cropping images.
-  const minColumnWidth=240;
-  const gap=16;
-  const columnCount=Math.max(1,Math.floor((galleryEl.clientWidth+gap)/(minColumnWidth+gap)));
-  galleryEl.style.gridTemplateColumns=`repeat(${columnCount},minmax(0,1fr))`;
-  const columns=Array.from({length:columnCount},()=>{
-    const column=document.createElement('div');
-    column.className='gallery-column';
-    galleryEl.appendChild(column);
-    return column;
-  });
-
-  items.forEach((p,i)=>{
-    const tile=document.createElement('article');
-    tile.className='tile';
-    const visual=document.createElement('div');
-    visual.className='tile-visual';
-    const a=document.createElement('a');
-    a.href=pathFor(p.image);
-    a.target='_blank';
-    a.rel='noopener noreferrer';
-    a.setAttribute('aria-label',p.alt||'Open photograph');
-    const img=document.createElement('img');
-    img.src=pathFor(p.image);
-    img.alt=p.alt||'';
-    img.loading='lazy';
-    img.decoding='async';
-    img.onerror=()=>{tile.style.display='none';};
-    a.appendChild(img);
-    visual.appendChild(a);
-    tile.appendChild(visual);
-    // Captions are optional per photograph. Older gallery entries default to visible.
-    if(p.showCaption!==false){
-      const info=document.createElement('div');
-      info.className='tile-info';
-      const title=document.createElement('span');
-      title.textContent=p.alt||(p.image||'').split('/').pop();
-      const category=document.createElement('span');
-      category.textContent=p.category||'Other';
-      info.append(title,category);
-      tile.appendChild(info);
-    }
-    columns[i%columnCount].appendChild(tile);
-  });
-}
-
-let resizeFrame;
-window.addEventListener('resize',()=>{
-  cancelAnimationFrame(resizeFrame);
-  resizeFrame=requestAnimationFrame(draw);
-});
-
-document.getElementById('filters').addEventListener('click',e=>{
-  const button=e.target.closest('button[data-category]');
-  if(!button)return;
-  active=button.dataset.category;
-  document.querySelectorAll('.filter').forEach(item=>item.classList.toggle('active',item===button));
-  draw();
-});
-
-// Fetch the latest committed gallery order instead of a browser/CDN-cached JSON file.
-fetch(`content/gallery.json?v=${Date.now()}`, {cache:'no-store'})
-  .then(response=>{
-    if(!response.ok)throw new Error('Could not load gallery');
-    return response.json();
-  })
-  .then(data=>{
-    photos=Array.isArray(data)?data:(data.photos||[]);
-    draw();
-    if(photos[0]?.image){
-      const hero=document.getElementById('heroImg');
-      hero.src=pathFor(photos[0].image);
-      hero.hidden=false;
-      hero.style.display='block';
-      hero.parentElement.querySelector('.placeholder').style.display='none';
-    }
-  })
-  .catch(error=>{
-    console.error('Gallery could not be loaded:',error);
-    photos=[];
-    countEl.textContent='Portfolio / unavailable';
-    galleryEl.innerHTML='<div class="empty">The gallery could not be loaded. Check that <code>content/gallery.json</code> exists in the published site and contains your photo list, then refresh this page.</div>';
-  });
-</script>
-</body>
-</html>
+const galleryEl=document.getElementById('gallery'),countEl=document.getElementById('count');let photos=[],active='all';
+function pathFor(src){if(!src)return '';if(/^https?:\/\//i.test(src))return src;return src.replace(/^\/+/,'');}
+function draw(){const items=photos.filter(p=>active==='all'||String(p.category||'other').toLowerCase()===active);countEl.textContent=`Portfolio / ${String(items.length).padStart(2,'0')} images`;galleryEl.innerHTML='';if(!items.length){galleryEl.innerHTML='<div class="empty">No photographs in this selection yet.</div>';return;}const minColumnWidth=240,gap=20;const columnCount=Math.max(1,Math.floor((galleryEl.clientWidth+gap)/(minColumnWidth+gap)));galleryEl.style.gridTemplateColumns=`repeat(${columnCount},minmax(0,1fr))`;const columns=Array.from({length:columnCount},()=>{const col=document.createElement('div');col.className='gallery-column';galleryEl.appendChild(col);return col;});items.forEach((p,i)=>{const tile=document.createElement('article');tile.className='tile';const visual=document.createElement('div');visual.className='tile-visual';const a=document.createElement('a');a.href=pathFor(p.image);a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',p.alt||'Open photograph');const img=document.createElement('img');img.src=pathFor(p.image);img.alt=p.alt||'';img.loading='lazy';img.decoding='async';img.onerror=()=>{tile.style.display='none';};a.appendChild(img);visual.appendChild(a);tile.appendChild(visual);if(p.showCaption!==false){const info=document.createElement('div');info.className='tile-info';const title=document.createElement('span');title.textContent=p.alt||(p.image||'').split('/').pop();const category=document.createElement('span');category.textContent=p.category||'Other';info.append(title,category);tile.appendChild(info);}columns[i%columnCount].appendChild(tile);});}
+let resizeFrame;window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(draw);});document.getElementById('filters').addEventListener('click',e=>{const button=e.target.closest('button[data-category]');if(!button)return;active=button.dataset.category;document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b===button));draw();});
+fetch(`content/gallery.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Could not load gallery');return r.json();}).then(data=>{photos=Array.isArray(data)?data:(data.photos||[]);draw();if(photos[0]?.image){const hero=document.getElementById('heroImg');hero.src=pathFor(photos[0].image);hero.hidden=false;document.getElementById('heroPlaceholder').style.display='none';}}).catch(err=>{console.error('Gallery could not be loaded:',err);photos=[];countEl.textContent='Portfolio / unavailable';galleryEl.innerHTML='<div class="empty">The gallery could not be loaded. Check that <code>content/gallery.json</code> exists in the published site.</div>';});
+</script></body></html>
