@@ -10,21 +10,21 @@ A complete static GitHub Pages photography portfolio with a separate upload/mana
 
 ## Install / update your existing repository
 1. Download and unzip this package.
-2. In `kamila11441/jakub-draftrepo-filemanagementv1`, upload or replace `index.html`.
+2. In `kamila11441/jakub-draftrepo-filemanagementv3`, upload or replace `index.html`.
 3. Upload `admin/pictures.html` into the repository's `admin/` folder.
 4. Upload `content/gallery.json` into `content/`. If you already have a gallery JSON with photographs, **do not replace it with the empty file in this package**; keep your existing file.
 5. Ensure an `images/` folder exists. GitHub does not track empty folders, so it will appear after the first image is uploaded.
 6. Commit changes to `main`.
 7. Wait for GitHub Pages to deploy, then open:
-   - Portfolio: https://kamila11441.github.io/jakub-draftrepo-filemanagementv1/
-   - Picture Manager: https://kamila11441.github.io/jakub-draftrepo-filemanagementv1/admin/pictures.html
+   - Portfolio: https://kamila11441.github.io/jakub-draftrepo-filemanagementv3/
+   - Picture Manager: https://kamila11441.github.io/jakub-draftrepo-filemanagementv3/admin/pictures.html
 
 ## Authentication / token setup
 GitHub Pages is static, so it cannot keep an access token secret on a server. The manager uses the GitHub Contents API and asks for a token each session. The token is not stored in local storage and is not embedded in the code.
 
 Create a fine-grained token at https://github.com/settings/personal-access-tokens/new:
 - Resource owner: `kamila11441`
-- Repository access: Only select repositories → `jakub-draftrepo-filemanagementv1`
+- Repository access: Only select repositories → `jakub-draftrepo-filemanagementv3`
 - Repository permissions: Contents → Read and write
 
 Keep the token private, never commit it, and clear it from the page when finished. It can modify files in the selected repository.
