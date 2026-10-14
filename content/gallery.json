@@ -1,9 +1,15 @@
 {
   "photos": [
     {
-      "image": "images/1792017775852-3usbn-IMG_7926.jpeg",
-      "alt": "IMG 7926",
-      "category": "editorial",
+      "image": "images/1792017799765-jki5p-EF3E74B6-65E0-4DFF-8575-4C4E78BC81A8.jpeg",
+      "alt": "EF3E74B6 65E0 4DFF 8575 4C4E78BC81A8",
+      "category": "people",
+      "showCaption": false
+    },
+    {
+      "image": "images/1792017802034-d9mkf-643BBBE8-137D-4EA6-BA93-3EE90F9113A5.jpeg",
+      "alt": "643BBBE8 137D 4EA6 BA93 3EE90F9113A5",
+      "category": "people",
       "showCaption": false
     }
   ]
