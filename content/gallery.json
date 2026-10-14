@@ -1,4 +1,10 @@
 {
   "photos": [
+    {
+      "image": "images/1792017775852-3usbn-IMG_7926.jpeg",
+      "alt": "IMG 7926",
+      "category": "editorial",
+      "showCaption": false
+    }
   ]
 }
