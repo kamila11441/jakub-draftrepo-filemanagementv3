@@ -35,7 +35,7 @@ button{font:inherit;color:inherit}
 .sheet{position:relative;z-index:2;background:var(--paper);border-radius:32px 32px 0 0;box-shadow:0 -40px 80px rgba(0,0,0,.35);padding:0 clamp(20px,3.4vw,48px)}
 .inner{width:min(1500px,100%);margin:auto}
 
-.work-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:clamp(56px,8vw,112px) 0 28px}
+.work-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:clamp(36px,5vw,64px) 0 8px}
 .work-head h2{margin:0;font:400 clamp(48px,7vw,104px)/.9 var(--serif);letter-spacing:-.03em}
 .count{display:block;margin-top:12px;font-size:14px;color:var(--mid)}
 .filters{display:flex;flex-wrap:wrap;gap:8px}
@@ -126,6 +126,8 @@ html.lock{overflow:hidden}
 .lb-cap{padding:16px 20px 20px}
 }
 @media(prefers-reduced-motion:reduce){.swap{animation:none}.lb{transition:none}}
+.filters{position:sticky;top:60px;z-index:6;padding:12px 0;background:rgba(243,244,246,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+@media(max-width:760px){.filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}.filter{flex:none}}
 </style></head>
 <body>
 <header class="bar"><span>Photographer</span><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a class="manage" href="admin/pictures.html">Manage ↗</a></nav></header>
@@ -133,7 +135,7 @@ html.lock{overflow:hidden}
 <section class="stage" id="top" aria-label="Introduction"><div class="hero-frame"><div class="hero-placeholder" id="heroPlaceholder">Selected frame</div><img class="hero-img" id="heroImg" alt="" hidden><div class="shade"></div></div><div class="hero-text"><div><h1><span>Jakub </span><span>Kowalski</span></h1><p>Photography from Warsaw, Poland</p></div></div></section>
 <div class="sheet">
 <section class="strip" id="strip" aria-label="Featured frames" hidden><div class="strip-pin"><div class="strip-track" id="stripTrack"></div><div class="strip-line"><div class="strip-bar" id="stripBar"></div></div><div class="strip-meta"><span id="stripTitle"></span><span id="stripNo"></span></div></div></section>
-<section class="inner" id="work"><div class="work-head"><div><h2>Selected work</h2><span class="count" id="count">00 photographs</span></div><div class="filters" id="filters"><button class="filter active" data-category="all">All</button><button class="filter" data-category="people">People</button><button class="filter" data-category="places">Places</button><button class="filter" data-category="editorial">Editorial</button><button class="filter" data-category="other">Other</button></div></div><div class="gallery" id="gallery"><div class="empty">Your photographs will appear here.</div></div></section>
+<section class="inner" id="work"><div class="work-head"><div><h2>Selected work</h2><span class="count" id="count">00 photographs</span></div></div><div class="filters" id="filters"><button class="filter active" data-category="all">All</button><button class="filter" data-category="people">People</button><button class="filter" data-category="places">Places</button><button class="filter" data-category="editorial">Editorial</button><button class="filter" data-category="other">Other</button></div><div class="gallery" id="gallery"><div class="empty">Your photographs will appear here.</div></div></section>
 <section class="inner about" id="about"><h2>Looking closer.</h2><p id="aboutText">I’m Jakub, a photographer drawn to people, places and the quiet moments in between. My work explores the way light, atmosphere and human connection shape a story.</p></section>
 </div>
 <section class="contact" id="contact"><div class="panel"><h2>Let’s talk.</h2><div class="panel-row"><p>For commissions, collaborations or any inquiries, feel free to get in touch. I’m always open to new projects and ideas.</p><div class="links"><a href="mailto:igjakyb11@gmail.com">Email</a><a href="https://www.instagram.com/jakyb11/" target="_blank" rel="noopener noreferrer">Instagram</a></div></div><footer class="footer"><span>© Jakub Kowalski</span><span>Independent photographer</span><a href="#top">Back to top ↑</a></footer></div></section>
